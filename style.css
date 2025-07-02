@@ -38,6 +38,20 @@ body {
   height: auto;
   max-height: 400px;
 }
+
+.header-background{
+  background: linear-gradient(
+    to right,
+    #6a0dad,
+    #000000
+  );
+}
+
+.button_comentario{
+  border: '1px solid red';
+}
+
+
 .logo-text {
   background: linear-gradient(
     to right,
@@ -51,13 +65,6 @@ body {
   line-height: 1;
 }
 
-.header-background{
-  background: linear-gradient(
-    to right,
-    #6a0dad,
-    #000000
-  );
-}
 
 @media (min-width: 768px) {
   .logo-text {
