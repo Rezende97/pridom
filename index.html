@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apresentação Institucional - Pridom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link para o arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Header & Navigation -->
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300 header-background"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logomarca Pridom (Texto Estilizado ou Imagem SVG) -->
+        <!-- Se você salvou a logomarca SVG, use a linha abaixo e comente a div.logo-text -->
+        <!-- <img src="pridom_logo.svg" alt="Logomarca Pridom" class="h-10 md:h-12"> -->
+        <div class="logo-text">Pridom</div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#sobre" class="nav-link text-gray-600 font-medium color-menu" style="color: #ffffff;"
+            >Sobre Nós</a
+          >
+          <a href="#servicos" class="nav-link text-gray-600 font-medium" style="color: #ffffff;"
+            >Serviços</a
+          >
+          <a href="#clientes" class="nav-link text-gray-600 font-medium" style="color: #ffffff;"
+            >Clientes</a
+          >
+          <a href="#profissionais" class="nav-link text-gray-600 font-medium" style="color: #ffffff;"
+            >Profissionais</a
+          >
+          <a href="#contato" class="nav-link text-gray-600 font-medium" style="color: #ffffff;"
+            >Contato</a
+          >
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-gray-700">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: #ffffff;"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white">
+        <a href="#sobre" class="block py-2 px-6 text-gray-600 hover:bg-gray-100"
+          >Sobre Nós</a
+        >
+        <a
+          href="#servicos"
+          class="block py-2 px-6 text-gray-600 hover:bg-gray-100"
+          >Serviços</a
+        >
+        <a
+          href="#clientes"
+          class="block py-2 px-6 text-gray-600 hover:bg-gray-100"
+          >Clientes</a
+        >
+        <a
+          href="#profissionais"
+          class="block py-2 px-6 text-gray-600 hover:bg-gray-100"
+          >Profissionais</a
+        >
+        <a
+          href="#contato"
+          class="block py-2 px-6 text-gray-600 hover:bg-gray-100"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="bg-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+            Parceiro Estratégico em Tecnologia
+          </h2>
+          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Com mais de uma década de experiência, transformamos a TI em um
+            diferencial competitivo para o crescimento e sucesso do seu negócio.
+          </p>
+          <a
+            href="mailto:contato@pridom.com.br"
+            class="mt-8 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105"
+            target="_blank"
+            >Fale com um Especialista</a
+          >
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="sobre" class="py-20 section-fade-in">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">Sobre a Pridom</h2>
+            <p class="text-md text-gray-600 mt-2 max-w-2xl mx-auto">
+              Nossa missão é ir além da entrega de serviços, atuando como um
+              pilar para a eficiência e inovação contínua de nossos clientes.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-700 mb-4">
+                O que nos diferencia?
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Nossa abordagem personalizada e o compromisso com a inovação nos
+                permitem ir além do suporte técnico tradicional. Oferecemos um
+                atendimento proativo que garante a continuidade dos negócios de
+                nossos clientes, antecipando problemas e implementando soluções
+                que impulsionam a produtividade e a segurança. A experiência de
+                mais de 10 anos, aliada a uma equipe em constante atualização,
+                nos posiciona como um parceiro estratégico confiável e
+                eficiente.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div
+                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
+              >
+                <h4 class="text-xl font-bold mb-2">💡 Inovação</h4>
+                <p class="text-gray-600">
+                  Buscamos constantemente as melhores e mais recentes
+                  tecnologias para nossos clientes.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
+              >
+                <h4 class="text-xl font-bold mb-2">⭐ Excelência</h4>
+                <p class="text-gray-600">
+                  Compromisso com a entrega de serviços de alta qualidade e
+                  resultados superiores.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
+              >
+                <h4 class="text-xl font-bold mb-2">🤝 Parceria</h4>
+                <p class="text-gray-600">
+                  Construímos relacionamentos duradouros, baseados na confiança
+                  mútua.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
+              >
+                <h4 class="text-xl font-bold mb-2">⚖️ Integridade</h4>
+                <p class="text-gray-600">
+                  Atuamos com transparência e ética em todas as nossas
+                  operações.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="servicos" class="py-20 bg-white section-fade-in">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">Nossos Serviços</h2>
+            <p class="text-md text-gray-600 mt-2 max-w-2xl mx-auto">
+              Oferecemos um portfólio completo de serviços de TI, desenhados
+              para atender às necessidades específicas do seu negócio. Explore
+              nossas áreas de atuação clicando nas abas abaixo.
+            </p>
+          </div>
+
+          <div class="max-w-4xl mx-auto">
+            <div
+              class="flex flex-wrap justify-center border-b border-gray-200 mb-8"
+            >
+              <button
+                class="tab-button py-2 px-4 font-medium text-gray-600 border-b-2 border-transparent transition"
+                data-tab="suporte"
+              >
+                Suporte Técnico de TI
+              </button>
+              <button
+                class="tab-button py-2 px-4 font-medium text-gray-600 border-b-2 border-transparent transition"
+                data-tab="desenvolvimento"
+              >
+                Desenvolvimento
+              </button>
+              <button
+                class="tab-button py-2 px-4 font-medium text-gray-600 border-b-2 border-transparent transition"
+                data-tab="consultoria"
+              >
+                Consultoria
+              </button>
+              <button
+                class="tab-button py-2 px-4 font-medium text-gray-600 border-b-2 border-transparent transition"
+                data-tab="infraestrutura"
+              >
+                Infraestrutura
+              </button>
+            </div>
+
+            <div id="suporte" class="tab-content">
+              <h3 class="text-2xl font-bold text-gray-700 mb-4">
+                Garantindo a Produtividade da Sua Equipe
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Oferecemos suporte completo, de Nível 1 a diagnósticos
+                avançados, para sistemas Windows, macOS e dispositivos em geral.
+                Atuamos também na manutenção e modernização de sites (WordPress,
+                React) e no suporte a servidores críticos (DNS, Arquivos,
+                Windows Server, Linux), assegurando estabilidade e performance.
+              </p>
+              <div
+                class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400"
+              >
+                <p class="font-semibold text-purple-800">Exemplo de Impacto:</p>
+                <p class="text-purple-700">
+                  Ajudamos uma empresa de médio porte a reduzir em 30% o tempo
+                  de inatividade de seus sistemas, aumentando significativamente
+                  a eficiência operacional.
+                </p>
+              </div>
+            </div>
+
+            <div id="desenvolvimento" class="tab-content">
+              <h3 class="text-2xl font-bold text-gray-700 mb-4">
+                Soluções Digitais que Impulsionam o Crescimento
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Criamos soluções sob medida para as suas demandas, incluindo
+                sistemas completos para automação de processos, sites
+                institucionais modernos e landing pages otimizadas para
+                conversão, focadas em resultados de negócio.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-600 mb-4 pl-2 space-y-1"
+              >
+                <li>Sistemas completos e personalizados</li>
+                <li>Sites institucionais e plataformas online</li>
+                <li>Landing pages modernas e funcionais</li>
+              </ul>
+              <div
+                class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400"
+              >
+                <p class="font-semibold text-purple-800">Exemplo de Impacto:</p>
+                <p class="text-purple-700">
+                  Desenvolvemos uma plataforma de e-commerce que aumentou as
+                  vendas online de um cliente em 45% no primeiro ano.
+                </p>
+              </div>
+            </div>
+
+            <div id="consultoria" class="tab-content">
+              <h3 class="text-2xl font-bold text-gray-700 mb-4">
+                Otimizando a Colaboração e a Produtividade
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Auxiliamos na escolha, implantação e gerenciamento das melhores
+                plataformas de produtividade, garantindo que sua equipe utilize
+                as ferramentas mais eficientes para colaboração, como Google
+                Workspace e Microsoft 365.
+              </p>
+              <div
+                class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400"
+              >
+                <p class="font-semibold text-purple-800">Exemplo de Impacto:</p>
+                <p class="text-purple-700">
+                  Implementamos o Google Workspace em uma startup, otimizando a
+                  comunicação interna e reduzindo custos com licenças de
+                  software.
+                </p>
+              </div>
+            </div>
+
+            <div id="infraestrutura" class="tab-content">
+              <h3 class="text-2xl font-bold text-gray-700 mb-4">
+                Base Sólida para o Futuro Digital
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Projetamos e implementamos soluções de infraestrutura robustas,
+                seguras e escaláveis, incluindo cabeamento estruturado, redes de
+                fibra óptica e sistemas wireless profissionais de alta
+                performance.
+              </p>
+              <div
+                class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400"
+              >
+                <p class="font-semibold text-purple-800">Exemplo de Impacto:</p>
+                <p class="text-purple-700">
+                  Projetamos e implementamos uma nova infraestrutura de rede
+                  para uma empresa de eventos, garantindo conectividade
+                  impecável para milhares de usuários.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients Section -->
+      <section id="clientes" class="py-20 section-fade-in">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">Nossos Clientes</h2>
+            <p class="text-md text-gray-600 mt-2 max-w-2xl mx-auto">
+              Temos orgulho de atender empresas de diversos portes e segmentos,
+              adaptando nossas soluções para cada desafio específico.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-700 mb-4">
+                Diversidade de Setores Atendidos
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Nossa versatilidade nos permite entregar resultados para
+                clientes nos setores de entretenimento, música, publicidade,
+                eventos, finanças, telecomunicações e tecnologia. Esta
+                diversidade enriquece nossa experiência e nos permite aplicar
+                aprendizados de um setor para inovar em outro.
+              </p>
+              <p class="text-gray-700 font-semibold">
+                Alguns de nossos parceiros:
+              </p>
+              <p class="text-gray-600">
+                Kondzilla, Instituto Kondzilla, Somos Pira, Sobre Funk, Love
+                Funk, Sul Telecom, SelecteTech, ST Telecom, entre outros.
+              </p>
+            </div>
+            <div class="chart-container">
+              <canvas id="clientSectorsChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Section for Featured Partners -->
+          <div class="mt-20">
+            <h3 class="text-2xl font-bold text-center text-gray-700 mb-8">
+              Nossos Parceiros em Destaque
+            </h3>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+            >
+              <!-- Example Client Card 1 -->
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+              >
+                <img
+                  src="https://placehold.co/100x100/A0D9FF/007bff?text=Logo"
+                  alt="Logo da Empresa Alpha"
+                  class="w-24 h-24 rounded-full mb-4 object-cover"
+                />
+                <h4 class="text-xl font-bold text-gray-800 mb-1">
+                  Empresa Alpha
+                </h4>
+                <p class="text-gray-600 text-sm mb-2">Contato: João Silva</p>
+                <span
+                  class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3"
+                  >Setor: Tecnologia</span
+                >
+                <p class="text-gray-700 text-sm">
+                  "Parceria estratégica em desenvolvimento de sistemas
+                  personalizados que otimizaram nossos processos internos."
+                </p>
+              </div>
+              <!-- Example Client Card 2 -->
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+              >
+                <img
+                  src="https://placehold.co/100x100/FFD700/FFA500?text=Logo"
+                  alt="Logo da Beta Marketing"
+                  class="w-24 h-24 rounded-full mb-4 object-cover"
+                />
+                <h4 class="text-xl font-bold text-gray-800 mb-1">
+                  Beta Marketing
+                </h4>
+                <p class="text-gray-600 text-sm mb-2">Contato: Maria Souza</p>
+                <span
+                  class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3"
+                  >Setor: Publicidade</span
+                >
+                <p class="text-gray-700 text-sm">
+                  "Suporte de TI proativo que garante a continuidade das nossas
+                  campanhas digitais sem interrupções."
+                </p>
+              </div>
+              <!-- Example Client Card 3 -->
+              <div
+                class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+              >
+                <img
+                  src="https://placehold.co/100x100/FFC0CB/FF69B4?text=Logo"
+                  alt="Logo da Financiar Mais"
+                  class="w-24 h-24 rounded-full mb-4 object-cover"
+                />
+                <h4 class="text-xl font-bold text-gray-800 mb-1">
+                  Financiar Mais
+                </h4>
+                <p class="text-gray-600 text-sm mb-2">
+                  Contato: Carlos Pereira
+                </p>
+                <span
+                  class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3"
+                  >Setor: Finanças</span
+                >
+                <p class="text-gray-700 text-sm">
+                  "Consultoria especializada que nos ajudou a migrar para a
+                  nuvem de forma segura e eficiente."
+                </p>
+              </div>
+              <!-- You can add more client cards here following the same structure -->
+            </div>
+          </div>
+
+          <div class="mt-20">
+            <h3 class="text-2xl font-bold text-center text-gray-700 mb-8">
+              O que eles dizem sobre nós
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">
+                  "A Pridom transformou nossa infraestrutura de TI. O suporte é
+                  rápido e eficiente, e a equipe está sempre à frente das nossas
+                  necessidades."
+                </p>
+                <p class="text-right font-bold text-gray-700 mt-4">
+                  - Cliente Satisfeito, Setor de Publicidade
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">
+                  "Com a consultoria da Pridom, otimizamos nossos processos e
+                  ganhamos uma produtividade que nunca imaginamos ser possível."
+                </p>
+                <p class="text-right font-bold text-gray-700 mt-4">
+                  - Parceiro de Negócios, Setor de Finanças
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professionals Section -->
+      <section id="profissionais" class="py-20 bg-white section-fade-in">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">
+              Nossa Equipe de Especialistas
+            </h2>
+            <p class="text-md text-gray-600 mt-2 max-w-2xl mx-auto">
+              Conheça os profissionais dedicados que fazem da Pridom um parceiro
+              de confiança em tecnologia.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          >
+            <!-- Professional Card 1: Luiz Israel -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+            >
+              <img
+                src="https://placehold.co/120x120/CCCCCC/333333?text=Luiz"
+                alt="Foto de Luiz Israel"
+                class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-purple-200"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-1">Luiz Israel</h4>
+              <p class="text-purple-700 font-semibold mb-2">
+                Responsável pela TI
+              </p>
+              <p class="text-gray-700 text-sm">
+                Líder experiente na área de TI, Luiz Israel é o responsável por
+                toda a parte de infraestrutura da empresa, garantindo a
+                estabilidade e segurança dos sistemas.
+              </p>
+            </div>
+            <!-- Professional Card 2: Gabriel -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+            >
+              <img
+                src="https://placehold.co/120x120/CCCCCC/333333?text=Gabriel"
+                alt="Foto de Gabriel"
+                class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-purple-200"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-1">Gabriel</h4>
+              <p class="text-purple-700 font-semibold mb-2">Desenvolvedor</p>
+              <p class="text-gray-700 text-sm">
+                Gabriel é um desenvolvedor talentoso, especializado na criação
+                de soluções digitais inovadoras e personalizadas para atender às
+                necessidades dos nossos clientes.
+              </p>
+            </div>
+            <!-- Add more professional cards here as needed -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+            >
+              <img
+                src="https://placehold.co/120x120/CCCCCC/333333?text=Juliano"
+                alt="Foto de Juliano"
+                class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-purple-200"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-1">Juliano</h4>
+              <p class="text-purple-700 font-semibold mb-2">
+                Consultora de Produtividade
+              </p>
+              <p class="text-gray-700 text-sm">
+                Juliano auxilia empresas na otimização de fluxos de trabalho e
+                na implementação de ferramentas de colaboração, impulsionando a
+                eficiência das equipes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        id="contato"
+        class="bg-purple-600 text-white py-20 section-fade-in"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-2">Sua Solução Começa Aqui!</h2>
+          <p class="text-lg text-purple-100 mb-6 max-w-2xl mx-auto">
+            Vamos conversar sobre como a Pridom pode ser o parceiro estratégico
+            que sua empresa precisa para alcançar seus objetivos tecnológicos e
+            de negócios.
+          </p>
+          <a
+            href="mailto:contato@pridom.com.br"
+            class="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105"
+            >Agende uma Conversa</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-xl font-bold">Pridom</h3>
+        <p class="my-2">Consultoria e Suporte de TI</p>
+        <p class="text-gray-400">
+          <strong>Email:</strong> contato@lcoelhotech.com.br |
+          <strong>Telefone:</strong> (11) 98725-0373
+        </p>
+        <p class="text-sm text-gray-500 mt-4">
+          &copy; 2025 Pridom. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+  </body>
+</html>
