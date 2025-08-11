@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apresentação Institucional - Pridom</title>
+    <title>Pridom – Tecnologia que impulsiona o seu crescimento</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <meta name="description" content="Pridom – Tecnologia que impulsiona o seu crescimento">
+    <link rel="shortcut icon" href="src/image/icones/favicon.ico" type="image/x-icon">
     <!-- Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -27,7 +29,10 @@
         <!-- Logomarca Pridom (Texto Estilizado ou Imagem SVG) -->
         <!-- Se você salvou a logomarca SVG, use a linha abaixo e comente a div.logo-text -->
         <!-- <img src="pridom_logo.svg" alt="Logomarca Pridom" class="h-10 md:h-12"> -->
-        <div class="logo-text">Pridom</div>
+        <div class="logo-text">
+          <img src="src/image/logo-pridom.png" alt="Logo marca Pridom" width="150" height="150" />
+          <!-- Pridom -->
+        </div>
         <nav class="hidden md:flex space-x-8">
           <a href="#sobre" class="nav-link text-gray-600 font-medium color-menu" style="color: #ffffff;"
             >Sobre Nós</a
@@ -92,8 +97,8 @@
 
     <main>
       <!-- Hero Section -->
-      <section id="hero" class="bg-white py-20 md:py-32">
-        <div class="container mx-auto px-6 text-center">
+      <section id="hero" class="bg-white py-20 md:py-32 banner">
+        <!-- <div class="container mx-auto px-6 text-center">
           <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
             Parceiro Estratégico em Tecnologia
           </h2>
@@ -106,77 +111,80 @@
             class="mt-8 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105"
             target="_blank"
             >Fale com um Especialista</a>
-        </div>
+        </div> -->
       </section>
 
       <!-- About Section -->
-      <section id="sobre" class="py-20 section-fade-in">
-        <div class="container mx-auto px-6">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800">Sobre a Pridom</h2>
-            <p class="text-md text-gray-600 mt-2 max-w-2xl mx-auto">
-              Nossa missão é ir além da entrega de serviços, atuando como um
-              pilar para a eficiência e inovação contínua de nossos clientes.
-            </p>
-          </div>
+      <section id="sobre" class="py-20 section-fade-in bg-gray-50">
+  <div class="container mx-auto px-6">
+    
+    <!-- Sobre a Pridom -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
+      <!-- Texto -->
+      <div>
+  <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre a Pridom</h2>
+  <p class="text-md text-gray-600 mb-4 text-justify" style="text-justify: inter-word;">
+    Na Pridom, acreditamos que a tecnologia é a chave para transformar negócios e impulsionar resultados. Nosso propósito é ser muito mais que um fornecedor — somos parceiros estratégicos, comprometidos com o crescimento e a evolução de cada cliente.
+  </p>
+  <p class="text-md text-gray-600 mb-4 text-justify" style="text-justify: inter-word;">
+    Com soluções personalizadas e inovação constante, ajudamos empresas a alcançar novos patamares de eficiência, produtividade e competitividade. Atuamos lado a lado com nossos clientes, entendendo seus desafios e criando estratégias tecnológicas que impulsionam sua jornada de transformação digital.
+  </p>
+  <p class="text-md text-gray-600 text-justify" style="text-justify: inter-word;">
+    Seja modernizando processos, implementando soluções inteligentes ou otimizando a infraestrutura de TI, nossa missão é clara: acelerar o crescimento e transformar empresas por meio da tecnologia.
+  </p>
+</div>
 
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 class="text-2xl font-bold text-gray-700 mb-4">
-                O que nos diferencia?
-              </h3>
-              <p class="text-gray-600 mb-6">
-                Nossa abordagem personalizada e o compromisso com a inovação nos
-                permitem ir além do suporte técnico tradicional. Oferecemos um
-                atendimento proativo que garante a continuidade dos negócios de
-                nossos clientes, antecipando problemas e implementando soluções
-                que impulsionam a produtividade e a segurança. A experiência de
-                mais de 10 anos, aliada a uma equipe em constante atualização,
-                nos posiciona como um parceiro estratégico confiável e
-                eficiente.
-              </p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div
-                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
-              >
-                <h4 class="text-xl font-bold mb-2">💡 Inovação</h4>
-                <p class="text-gray-600">
-                  Buscamos constantemente as melhores e mais recentes
-                  tecnologias para nossos clientes.
-                </p>
-              </div>
-              <div
-                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
-              >
-                <h4 class="text-xl font-bold mb-2">⭐ Excelência</h4>
-                <p class="text-gray-600">
-                  Compromisso com a entrega de serviços de alta qualidade e
-                  resultados superiores.
-                </p>
-              </div>
-              <div
-                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
-              >
-                <h4 class="text-xl font-bold mb-2">🤝 Parceria</h4>
-                <p class="text-gray-600">
-                  Construímos relacionamentos duradouros, baseados na confiança
-                  mútua.
-                </p>
-              </div>
-              <div
-                class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"
-              >
-                <h4 class="text-xl font-bold mb-2">⚖️ Integridade</h4>
-                <p class="text-gray-600">
-                  Atuamos com transparência e ética em todas as nossas
-                  operações.
-                </p>
-              </div>
-            </div>
-          </div>
+
+      <!-- Logo -->
+      <div class="flex justify-center">
+        <img src="src/image/logo-pridom.png" alt="Pridom" class="max-w-[520px] w-full h-auto drop-shadow-lg">
+      </div>
+    </div>
+
+    <!-- O que nos diferencia -->
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <h3 class="text-2xl font-bold text-gray-700 mb-4">O que nos diferencia?</h3>
+        <p class="text-gray-600 mb-6">
+          Na Pridom, vamos muito além do suporte técnico tradicional. Nossa atuação é estratégica, personalizada e focada em gerar resultados reais para o seu negócio.
+        </p>
+        <p class="text-gray-600 mb-6">
+          Antecipamos desafios, identificamos oportunidades e implementamos soluções tecnológicas que aumentam a produtividade, fortalecem a segurança e garantem a continuidade das operações.
+        </p>
+        <p class="text-gray-600">
+          Com mais de 10 anos de experiência e uma equipe que está sempre se atualizando, nos tornamos um parceiro confiável e inovador, pronto para transformar tecnologia em crescimento.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500 hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">💡 Inovação</h4>
+          <p class="text-gray-600">
+            Trazemos as soluções mais modernas e eficazes do mercado, aplicando tecnologia de ponta para gerar resultados concretos e duradouros.
+          </p>
         </div>
-      </section>
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500 hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">⭐ Excelência</h4>
+          <p class="text-gray-600">
+            Superamos expectativas com serviços de alta performance, sempre entregues com rigor técnico e foco absoluto na qualidade.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500 hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">🤝 Parceria</h4>
+          <p class="text-gray-600">
+            Caminhamos lado a lado com nossos clientes, construindo relações sólidas baseadas em confiança, transparência e objetivos compartilhados.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500 hover:shadow-lg transition">
+          <h4 class="text-xl font-bold mb-2">⚖️ Integridade</h4>
+          <p class="text-gray-600">
+            Atuamos com ética, clareza e responsabilidade em todas as etapas, garantindo segurança e credibilidade em cada projeto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- Services Section -->
       <section id="servicos" class="py-20 bg-white section-fade-in">
