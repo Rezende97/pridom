@@ -154,4 +154,23 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappLink.href = `https://wa.me/${phoneNumber}?text=${message}`;
     whatsappLink.textContent = "Fale Conosco no WhatsApp"; // Altera o texto do botão
   }
+
+  document.getElementById("form-comentario").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch("comentarios-pridom/cadastrarComentario.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.text();
+      alert(result);
+    } catch (error) {
+      console.error("Erro na requisição:", error);
+    }
+});
+
 });
