@@ -209,14 +209,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function iniciarCarrossel(container) {
     let scrollX = 0;
     const velocidade = 0.5;
+
+    // 🔹 Duplicar só para efeito de rolagem contínua
+    container.innerHTML += container.innerHTML;
+
     setInterval(() => {
         scrollX += velocidade;
-        if (scrollX >= container.scrollWidth - container.clientWidth) {
-            scrollX = 0;
+
+        if (scrollX >= container.scrollWidth / 2) {
+            scrollX = 0; // volta sem flicker
         }
+
         container.scrollLeft = scrollX;
-    }, 16);
-  }
+    }, 16); // ~60fps
+}
+
 
   carregarComentarios();
 
