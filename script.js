@@ -168,6 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const result = await response.text();
       alert(result);
+
+      // Limpa o formulário após o envio
+      this.reset();
     } catch (error) {
       console.error("Erro na requisição:", error);
     }
