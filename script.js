@@ -257,4 +257,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   animar();
+
+  // document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.querySelector(".banner");
+
+    banner.addEventListener("click", () => {
+        window.open(
+          "https://wa.me/5511987250373?text=Olá, gostaria de saber mais sobre os serviços da Pridom.",
+          "_blank"
+          );
+      });
+  // });
+
 });
