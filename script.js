@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function iniciarCarrossel(container) {
     let scrollX = 0;
-    const velocidade = 6;
+    const velocidade = 1.2;
 
     // 🔹 Duplicar só para efeito de rolagem contínua
     container.innerHTML += container.innerHTML;
