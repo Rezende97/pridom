@@ -176,45 +176,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-async function carregarComentarios() {
-  try {
-    const res = await fetch("comentarios-pridom/listarComentarios.php");
-    const comentarios = await res.json();
+  async function carregarComentarios() {
+    try {
+      const res = await fetch("comentarios-pridom/listarComentarios.php");
+      const comentarios = await res.json();
 
-    const container = document.getElementById("comentarios-carousel");
+      const container = document.getElementById("comentarios-carousel");
 
-    comentarios.forEach(c => {
-      const card = document.createElement("div");
-      card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between mr-10";
-      card.innerHTML = `
-          <p class="text-sm text-gray-600 italic leading-snug">
-              “${c.comentario}”
-          </p>
-          <p class="text-xs text-gray-800 font-semibold mt-3">
-              - ${c.nome}, <span class="font-normal">${c.cargo}${c.empresa ? `, ${c.empresa}` : ""}</span>
-          </p>
-      `;
-      container.appendChild(card);
-    });
+      comentarios.forEach(c => {
+        const card = document.createElement("div");
+        card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between mr-10";
+        card.innerHTML = `
+            <p class="text-sm text-gray-600 italic leading-snug">
+                “${c.comentario}”
+            </p>
+            <p class="text-xs text-gray-800 font-semibold mt-3">
+                - ${c.nome}, <span class="font-normal">${c.cargo}${c.empresa ? `, ${c.empresa}` : ""}</span>
+            </p>
+        `;
+        container.appendChild(card);
+      });
 
-    iniciarCarrossel(container);
-  } catch (err) {
-    console.error("Erro ao carregar comentários:", err);
-  }
-}
-
-function iniciarCarrossel(container) {
-  const velocidade = 1.2;
-
-  setInterval(() => {
-    container.scrollLeft += velocidade;
-
-    if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-      container.scrollLeft = 0; // Reinicia sem duplicar
+      iniciarCarrossel(container);
+    } catch (err) {
+      console.error("Erro ao carregar comentários:", err);
     }
-  }, 16);
-}
+  }
 
-carregarComentarios();
+  function iniciarCarrossel(container) {
+    const velocidade = 1.2;
 
+    setInterval(() => {
+      container.scrollLeft += velocidade;
+
+      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        container.scrollLeft = 0; // Reinicia sem duplicar
+      }
+    }, 16);
+  }
+
+  carregarComentarios();
+
+   const logos = [
+    "src/logo-empresas/inst-kondzilla.png",
+    "src/logo-empresas/kondzilla.png",
+    "src/logo-empresas/love-funk.png",
+    "src/logo-empresas/SelecteTech.jpg",
+    "src/logo-empresas/sobre-funk.jpg",
+    "src/logo-empresas/somos-pira.jpg",
+    "src/logo-empresas/ST-Telecom.png",
+    "src/logo-empresas/Sul-Telecom.png",
+  ];
+
+  const container = document.getElementById("logos-carousel");
+
+  // Adiciona logos
+  logos.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.className = "h-16 object-contain flex-shrink-0";
+    container.appendChild(img);
+  });
+
+  // Duplica para rolagem contínua
+  container.innerHTML += container.innerHTML;
+
+  let scrollX = 0;
+  const velocidade = 1; // px por frame
+
+  function animar() {
+    scrollX += velocidade;
+
+    if (scrollX >= container.scrollWidth / 2) {
+      scrollX = 0;
+    }
+
+    container.parentElement.scrollLeft = scrollX;
+
+    requestAnimationFrame(animar);
+  }
+
+  animar();
 });
