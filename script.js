@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       comentarios.forEach(c => {
           const card = document.createElement("div");
-          card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between";
+          card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between mr-8";
           card.innerHTML = `
               <p class="text-sm text-gray-600 italic leading-snug">
                   “${c.comentario}”
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function iniciarCarrossel(container) {
     let scrollX = 0;
-    const velocidade = 0.5;
+    const velocidade = 1.2;
 
     // 🔹 Duplicar só para efeito de rolagem contínua
     container.innerHTML += container.innerHTML;
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.scrollLeft = scrollX;
     }, 16); // ~60fps
-}
+  }
 
 
   carregarComentarios();
