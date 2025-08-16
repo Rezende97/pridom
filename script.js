@@ -209,17 +209,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function iniciarCarrossel(container) {
     let scrollX = 0;
     const velocidade = 0.5;
-
     setInterval(() => {
         scrollX += velocidade;
-        if (scrollX >= container.scrollWidth - container.clientWidth) {
-            scrollX = 0; // volta pro início
+        if (scrollX >= container.scrollWidth / 2) {
+            scrollX = 0;
         }
         container.scrollLeft = scrollX;
     }, 16);
-}
+  }
 
-  carregarComentarios();
+carregarComentarios();
 
 
 });
