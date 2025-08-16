@@ -178,31 +178,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function carregarComentarios() {
     try {
-        const res = await fetch("comentarios-pridom/listarComentarios.php");
-        const comentarios = await res.json();
+      const res = await fetch("comentarios-pridom/listarComentarios.php");
+      const comentarios = await res.json();
 
-        const container = document.getElementById("comentarios-carousel");
+      const container = document.getElementById("comentarios-carousel");
 
-        comentarios.forEach(c => {
-            const card = document.createElement("div");
-            card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between";
-            card.innerHTML = `
-                <p class="text-sm text-gray-600 italic leading-snug">
-                    “${c.comentario}”
-                </p>
-                <p class="text-xs text-gray-800 font-semibold mt-3">
-                    - ${c.nome}, <span class="font-normal">${c.cargo}${c.empresa ? `, ${c.empresa}` : ""}</span>
-                </p>
-            `;
-            container.appendChild(card);
-        });
+      comentarios.forEach(c => {
+          const card = document.createElement("div");
+          card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between";
+          card.innerHTML = `
+              <p class="text-sm text-gray-600 italic leading-snug">
+                  “${c.comentario}”
+              </p>
+              <p class="text-xs text-gray-800 font-semibold mt-3">
+                  - ${c.nome}, <span class="font-normal">${c.cargo}${c.empresa ? `, ${c.empresa}` : ""}</span>
+              </p>
+          `;
+          container.appendChild(card);
+      });
 
-        // Duplica para loop infinito
-        container.innerHTML += container.innerHTML;
+      // Duplica para loop infinito
+      // container.innerHTML += container.innerHTML;
 
-        iniciarCarrossel(container);
+      iniciarCarrossel(container);
     } catch (err) {
-        console.error("Erro ao carregar comentários:", err);
+      console.error("Erro ao carregar comentários:", err);
     }
   }
 
@@ -211,14 +211,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const velocidade = 0.5;
     setInterval(() => {
         scrollX += velocidade;
-        if (scrollX >= container.scrollWidth / 2) {
+        if (scrollX >= container.scrollWidth - container.clientWidth) {
             scrollX = 0;
         }
         container.scrollLeft = scrollX;
     }, 16);
   }
 
-carregarComentarios();
-
+  carregarComentarios();
 
 });
