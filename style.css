@@ -76,7 +76,15 @@ body {
 }
 
 #comentarios-carousel {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media (min-width: 768px) {
