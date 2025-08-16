@@ -75,6 +75,10 @@ body {
   width: 100%;
 }
 
+#comentarios-carousel {
+    scroll-behavior: smooth;
+}
+
 @media (min-width: 768px) {
   .logo-text {
     font-size: 2.5rem; /* md:text-5xl */

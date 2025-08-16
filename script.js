@@ -174,6 +174,48 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       console.error("Erro na requisição:", error);
     }
-});
+  });
+
+  async function carregarComentarios() {
+    try {
+        const res = await fetch("comentarios-pridom/listarComentarios.php");
+        const comentarios = await res.json();
+
+        const container = document.getElementById("comentarios-carousel");
+
+        comentarios.forEach(c => {
+            const card = document.createElement("div");
+            card.className = "bg-white p-6 rounded-lg shadow-lg min-w-[350px] flex-shrink-0";
+            card.innerHTML = `
+                <p class="text-gray-600 italic">"${c.comentario}"</p>
+                <p class="text-right font-bold text-gray-700 mt-4">
+                    - ${c.nome}, ${c.cargo} ${c.empresa ? `, ${c.empresa}` : ""}
+                </p>
+            `;
+            container.appendChild(card);
+        });
+
+        // duplicar para loop infinito
+        container.innerHTML += container.innerHTML;
+
+        iniciarCarrossel(container);
+    } catch (err) {
+        console.error("Erro ao carregar comentários:", err);
+    }
+  }
+
+  function iniciarCarrossel(container) {
+      let scrollX = 0;
+      const velocidade = 1; // px por tick
+      setInterval(() => {
+          scrollX += velocidade;
+          if (scrollX >= container.scrollWidth / 2) {
+              scrollX = 0;
+          }
+          container.scrollLeft = scrollX;
+      }, 20);
+  }
+
+  carregarComentarios();
 
 });
