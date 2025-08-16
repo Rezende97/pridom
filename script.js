@@ -185,17 +185,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         comentarios.forEach(c => {
             const card = document.createElement("div");
-            card.className = "bg-white p-6 rounded-lg shadow-lg min-w-[350px] flex-shrink-0";
+            card.className = "bg-white p-4 rounded-xl shadow-md border border-gray-100 min-w-[250px] max-w-[250px] flex-shrink-0 flex flex-col justify-between";
             card.innerHTML = `
-                <p class="text-gray-600 italic">"${c.comentario}"</p>
-                <p class="text-right font-bold text-gray-700 mt-4">
-                    - ${c.nome}, ${c.cargo} ${c.empresa ? `, ${c.empresa}` : ""}
+                <p class="text-sm text-gray-600 italic leading-snug">
+                    “${c.comentario}”
+                </p>
+                <p class="text-xs text-gray-800 font-semibold mt-3">
+                    - ${c.nome}, <span class="font-normal">${c.cargo}${c.empresa ? `, ${c.empresa}` : ""}</span>
                 </p>
             `;
             container.appendChild(card);
         });
 
-        // duplicar para loop infinito
+        // Duplica para loop infinito
         container.innerHTML += container.innerHTML;
 
         iniciarCarrossel(container);
@@ -206,16 +208,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function iniciarCarrossel(container) {
       let scrollX = 0;
-      const velocidade = 1; // px por tick
+      const velocidade = 0.5; // px por tick (mais suave)
       setInterval(() => {
           scrollX += velocidade;
           if (scrollX >= container.scrollWidth / 2) {
               scrollX = 0;
           }
           container.scrollLeft = scrollX;
-      }, 20);
+      }, 16); // ~60fps
   }
 
   carregarComentarios();
+
 
 });
